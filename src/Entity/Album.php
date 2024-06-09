@@ -12,21 +12,22 @@ class Album
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
+    #[Groups(['albums.index', 'albums.nom'])]
     private ?int $id = null;
-    #[Groups(['albums.index'])]
     #[ORM\Column(length: 255)]
+    #[Groups(['albums.index', 'albums.nom'])]
     private ?string $nom = null;
-    #[Groups(['albums.index'])]
     #[ORM\Column(length: 255)]
+    #[Groups(['albums.index', 'albums.nom'])]
     private ?string $artiste = null;
     #[Groups(['albums.index'])]
     #[ORM\Column(length: 4)]
     private ?string $annee = null;
-    #[Groups(['albums.index'])]
+    #[Groups(['albums.index', 'albums.nom'])]
     #[ORM\Column(length: 255)]
     private ?string $label = null;
-
     #[ORM\Column(length: 255)]
+    #[Groups(['albums.index', 'albums.nom'])]
     private ?string $format = null;
     #[Groups(['albums.index'])]
     #[ORM\Column(length: 255)]
